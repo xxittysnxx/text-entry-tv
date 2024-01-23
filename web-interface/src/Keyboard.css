@@ -1,0 +1,127 @@
+.keyboard {
+  width: 100%;
+  position: relative;
+  padding: 3px;
+  background: #1B1B1B;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(50, 50, 50, 0.5);
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+
+  &.shift-row {
+    justify-content: left;
+  }
+}
+
+.keyboard-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 70px;
+  font-size: 18px;
+  height: 55px;
+  border-radius: 4px;
+  background-color: #363636;
+  border: 1px solid #101010;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 1.5px;
+  box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.2);
+
+  &.stretch-key {
+    flex-grow: 1;
+  }
+
+  &.space-bar {
+    flex-grow: 5;
+  }
+
+  &.control-key {
+    background-color: #2A2A2A;
+  }
+
+  &.left-hover {
+    background-color: #336565;
+  }
+
+  &.right-hover {
+    background-color: #6c333c;
+  }
+}
+
+.shift-icon {
+  rotate: 270deg;
+}
+
+.left-arrow-icon {
+  rotate: 180deg;
+}
+
+.simplified-keyboard .keyboard-button {
+  flex-basis: 90px;
+}
+
+svg {
+  background-color: transparent;
+}
+
+.cursor {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  outline: 8px solid rgba(0, 0, 0, 0.4);
+  position: absolute;
+  /* opacity: 1; */
+
+  &.left-cursor {
+    background-color: rgba(116, 246, 246, 0.7);
+  }
+
+  &.right-cursor {
+    background-color: rgba(235, 107, 126, 0.7);
+  }
+
+  &.hidden {
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.search-suggestions {
+  display: block;
+  overflow: hidden;
+  max-height: 36px;
+}
+
+.search-suggestion {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #7e7e7e;
+  border: 1px solid #101010;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 2px;
+  padding: 0px 12px;
+  box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.2);
+
+  &.left-hover {
+    background-color: #336565;
+  }
+
+  &.right-hover {
+    background-color: #6c333c;
+  }
+}
